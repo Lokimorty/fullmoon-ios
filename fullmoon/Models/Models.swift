@@ -19,6 +19,7 @@ public extension ModelConfiguration {
         case .deepseek_r1_distill_qwen_1_5b_8bit: .reasoning
         case .qwen_3_5_0_8b_4bit: .reasoning
         case .qwen_3_5_2b_4bit: .reasoning
+        case .qwen_3_5_9b_4bit: .reasoning
         case .qwen_3_4b_4bit: .reasoning
         case .qwen_3_8b_4bit: .reasoning
         default: .regular
@@ -55,6 +56,10 @@ extension ModelConfiguration: @retroactive Equatable {
         id: "mlx-community/Qwen3.5-2B-4bit"
     )
 
+    public static let qwen_3_5_9b_4bit = ModelConfiguration(
+        id: "mlx-community/Qwen3.5-9B-4bit"
+    )
+
     public static let qwen_3_4b_4bit = ModelConfiguration(
         id: "mlx-community/Qwen3-4B-4bit"
     )
@@ -70,6 +75,7 @@ extension ModelConfiguration: @retroactive Equatable {
         deepseek_r1_distill_qwen_1_5b_8bit,
         qwen_3_5_0_8b_4bit,
         qwen_3_5_2b_4bit,
+        qwen_3_5_9b_4bit,
         qwen_3_4b_4bit,
         qwen_3_8b_4bit,
     ]
@@ -132,6 +138,7 @@ extension ModelConfiguration: @retroactive Equatable {
         case .deepseek_r1_distill_qwen_1_5b_8bit: return 1.9
         case .qwen_3_5_0_8b_4bit: return 0.7
         case .qwen_3_5_2b_4bit: return 1.8
+        case .qwen_3_5_9b_4bit: return 5.5
         case .qwen_3_4b_4bit: return 2.3
         case .qwen_3_8b_4bit: return 4.7
         default: return nil
